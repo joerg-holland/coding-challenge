@@ -170,6 +170,8 @@ This are the development steps:
    - Load article with id
 8. Create article service and the test file with the command `$ npm run ng g service products --project=receipe-printer`
 9. Write test to getAll() articles. After that write the function to load the mock articles and document the code.
+10. Write test to get(id) one article. After that write the function to load the mock article and document the code.
+
 
 ---
 
