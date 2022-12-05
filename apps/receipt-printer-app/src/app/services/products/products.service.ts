@@ -16,4 +16,14 @@ export class ProductsService {
   public getAll(): Product[] {
     return PRODUCTS;
   }
+
+  /**
+   * get one product with id
+   * @return Product product
+   * @public
+   */
+  public get(id: string): Product {
+    const product = this.getAll().filter(x => x.id == id)[0];   
+    return product;
+  }
 }
