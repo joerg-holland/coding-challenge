@@ -1,105 +1,132 @@
+# CodingChallenge - SALES TAXES - Receipt Printer App
 
+## Description
 
-# CodingChallenge
+### Workspace
+Coming soon ...
 
-This project was generated using [Nx](https://nx.dev).
+### App
+Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical
+products that are exempt. Import duty is an additional sales tax
+applicable on all imported goods at a rate of 5%, with no exemptions. When I purchase items
+I receive a receipt which lists the name of all the items and their price (including tax),
+finishing with the total cost of the items,
+and the total amounts of sales taxes paid. The rounding rules for sales tax are that for a tax
+rate of n%, a shelf price of p contains (np/100 rounded up to the nearest 0.05) amount of
+sales tax. Write an application that prints out the receipt details for these shopping baskets…
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+INPUT:  
+- Input 1:
+  - 1 book at 12.49
+  - 1 music CD at 14.99
+  - 1 chocolate bar at 0.85
 
-🔎 **Smart, Fast and Extensible Build System**
+- Input 2:
+  - 1 imported box of chocolates at 10.00
+  - 1 imported bottle of perfume at 47.50
 
-## Quick Start & Documentation
+- Input 3:
+  - 1 imported bottle of perfume at 27.99
+  - 1 bottle of perfume at 18.99
+  - 1 packet of headache pills at 9.75
+  - 1 box of imported chocolates at 11.25
 
-[Nx Documentation](https://nx.dev/angular)
+OUTPUT
+- Output 1:
+  - 1 book: 12.49
+  - 1 music CD: 16.49
+  - 1 chocolate bar: 0.85
+  - Sales Taxes: 1.50
+  - Total: 29.83
+- Output 2:
+  - 1 imported box of chocolates: 10.50
+  - 1 imported bottle of perfume: 54.65
+  - Sales Taxes: 7.65
+  - Total: 65.15
+- Output 3:
+  - 1 imported bottle of perfume: 32.19
+  - 1 bottle of perfume: 20.89
+  - 1 packet of headache pills: 9.75
+  - 1 imported box of chocolates: 11.85
+  - Sales Taxes: 6.70
+  - Total: 74.68
 
-[10-minute video showing all Nx features](https://nx.dev/getting-started/intro)
+---
 
-[Interactive Tutorial](https://nx.dev/react-tutorial/01-create-application)
+## Requirements
 
-## Adding capabilities to your workspace
+### General
+1. Create own solution
+2. To deliver the code, create a git repository on github and send the link or a zip file of a
+local git repository and send it via mail
+3. Focus on code quality
+4. Make production ready code
+5. Work Test-Driven-Development (TDD)
+6. Commit regularly
+7. Free to use build systems and libraries the same way you would build real-world software
+8. File that gives hints on how to build it, and the assumptions that are made
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+### App
+Coming soon ...
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+### Software
+Which software is required to run the application?
 
-Below are our core plugins:
+1. **Node.js**
+    - Node.js is an open source JavaScript runtime environment for easily building server-side applications and also a runtime to powers many client-side development tools for modern JavaScript frameworks.
+    - Download and install from: <http://nodejs.org/>
+    - Version: *16.17.1 LTS*
+    - Verify: `$ node --version` => `v16.17.1`
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+2. **Git**
+    - Git 
+    - Download and install from: <https://git-scm.com/downloads/>
+    - Version: *2.37.3*
+    - Verify: `$ git --version` => `git version 2.37.3.windows.1`
 
-There are also many [community plugins](https://nx.dev/community) you could add.
+3. **NPM package manager**
+    - The NPM manager comes with the *Node.js* and need to be updated to the fix version.
+    - Version: *8.19.2*
+    - To update, open a terminal with administration rights:
+      - `$ npm install -g npm@8.19.2` (Windows)
+      - `$ sudo npm install -g npm@8.19.2` (Linux)
+    - Verifying the installation: `$ npm --version` => `8.19.2`
 
-## Generate an application
+---
 
-Run `ng g @nrwl/angular:app my-app` to generate an application.
+## Assumptions
+- It is free to use build systems and libraries the same way I would build real-world software. I choosed an NX workspace with the web framework Angular. It is maybe over-engineered but everything (e.g. development environment, test frameworks) is setup and it is for me the best way to show how i work. (Link: Development-Step (2))
 
-> You can use any of the plugins above to generate applications as well.
+---
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+## Getting Started
 
-## Generate a library
+Please check the required software before running the application.
+  
+### 1. NPM-packages
+Run `$ npm install` to install all required NPM-packages.
 
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
+### 2. Run on a development server
+Run `$ npm run ng serve receipt-printer-app` to start the application for a dev server in a local environment. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-> You can also use any of the plugins above to generate libraries as well.
+### 3. Build the application
 
-Libraries are shareable across libraries and applications. They can be imported from `@coding-challenge/mylib`.
+Run `$ npm run ng build receipt-printer-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Development server
+### 4. Running unit tests
 
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `$ npm run ng test receipt-printer-app` to execute the unit tests via [Jest](https://jestjs.io).
 
-## Code scaffolding
+---
 
-Run `ng g component my-component --project=my-app` to generate a new component.
+## Development Steps
+This are the development steps:
+1. Initialize the Git-Repository.
+2. Create a NX workspace with the command `$ npx create-nx-workspace` and choose the name "Coding-Challenge" with the angular app "receipt-printer-app".
+3. Update NX workspace and all npm-packages => Ensure that no deprecated or critical packages are used.
+4. Update README.md file.
 
-## Build
+---
 
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+## (Code) Quality
+Coming soon ...
