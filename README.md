@@ -159,13 +159,17 @@ Run `$ npm run ng test receipt-printer-app` to execute the unit tests via [Jest]
 This are the development steps:
 1. Initialize the Git-Repository.
 2. Setup development environment: Create a NX workspace with the command `$ npx create-nx-workspace` and choose the name "Coding-Challenge" with the angular app "receipt-printer-app".
-3. Update NX workspace and all npm-packages => Ensure that no deprecated or critical packages are used.
+3. Update NX workspace and all npm-packages => Ensure that no deprecated or critical packages are used. Following commands are used:
+   - (1) `$ npx nx migrate latest`
+   - (2) `$ npx nx migrate --run-migrations`
 4. Update README.md file.
 5. Defining requirements of the application. (Link: Requirements -> App)
 6. Design application architecture. Environment is already established (step 2 and 3), normally should be setup after all requirements are defined.
-7. Provide mock data and write tests for articles:
+7. Provide mock data (define data structure) and write tests for articles:
    - Load all articles
    - Load article with id
+8. Create article service and the test file with the command `$ npm run ng g service products --project=receipe-printer`
+9. Write test to getAll() articles. After that write the function to load the mock articles and document the code.
 
 ---
 
