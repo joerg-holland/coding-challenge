@@ -83,6 +83,7 @@ local git repository and send it via mail
 #### (b) Services
 - Article-Service
   - Load all articles
+  - Load article with id
 - Cart-Service
   - Load all shopping-baskets
 - Receipt-Service
@@ -114,7 +115,6 @@ Which software is required to run the application?
     - Verify: `$ node --version` => `v16.17.1`
 
 2. **Git**
-    - Git 
     - Download and install from: <https://git-scm.com/downloads/>
     - Version: *2.37.3*
     - Verify: `$ git --version` => `git version 2.37.3.windows.1`
@@ -161,6 +161,11 @@ This are the development steps:
 2. Setup development environment: Create a NX workspace with the command `$ npx create-nx-workspace` and choose the name "Coding-Challenge" with the angular app "receipt-printer-app".
 3. Update NX workspace and all npm-packages => Ensure that no deprecated or critical packages are used.
 4. Update README.md file.
+5. Defining requirements of the application. (Link: Requirements -> App)
+6. Design application architecture. Environment is already established (step 2 and 3), normally should be setup after all requirements are defined.
+7. Provide mock data and write tests for articles:
+   - Load all articles
+   - Load article with id
 
 ---
 
