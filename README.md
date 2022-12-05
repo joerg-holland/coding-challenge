@@ -55,7 +55,7 @@ OUTPUT
 
 ## Requirements
 
-### General
+### (1) General
 1. Create own solution
 2. To deliver the code, create a git repository on github and send the link or a zip file of a
 local git repository and send it via mail
@@ -66,10 +66,45 @@ local git repository and send it via mail
 7. Free to use build systems and libraries the same way you would build real-world software
 8. File that gives hints on how to build it, and the assumptions that are made
 
-### App
-Coming soon ...
+### (2) App
+#### (a) Data Structure
+- Products
+  - id (String => UUID)
+  - name (String)
+  - price (Number)
+  - category (String)
+  - imported (Boolean)
+- Carts
+  - id (String => UUID)
+  - CartProducts (Array)
+    - productId (String)
+    - amount (Number)
 
-### Software
+#### (b) Services
+- Article-Service
+  - Load all articles
+- Cart-Service
+  - Load all shopping-baskets
+- Receipt-Service
+  - Calculate sales taxes
+  - Calculate total sum
+- Tax-Service
+  - Calculate sale tax for a product
+- Util-Service
+  - Rounded up to the nearest 0.05
+
+#### (c) Environments
+- Local
+- [Development]
+- [QA]
+- Production
+
+#### (d) User Interface 
+- Input => Mock Data
+- Output => Simple page with text
+
+
+### (3) Software
 Which software is required to run the application?
 
 1. **Node.js**
@@ -95,7 +130,8 @@ Which software is required to run the application?
 ---
 
 ## Assumptions
-- It is free to use build systems and libraries the same way I would build real-world software. I choosed an NX workspace with the web framework Angular. It is maybe over-engineered but everything (e.g. development environment, test frameworks) is setup and it is for me the best way to show how i work. (Link: Development-Step (2))
+- It is free to use build systems and libraries the same way I would build real-world software. I choosed an NX workspace with the web framework Angular. It is maybe over-engineered but everything (e.g. development environment, test frameworks) is setup and it is for me the best way to show how i work. (Link: Development Steps -> (2))
+- The functionality around products and carts (like create or remove products or add products to the cart) is not part of this application. Instead mock data is used. (Link: Requirements -> App -> (2) Services)
 
 ---
 
@@ -122,11 +158,16 @@ Run `$ npm run ng test receipt-printer-app` to execute the unit tests via [Jest]
 ## Development Steps
 This are the development steps:
 1. Initialize the Git-Repository.
-2. Create a NX workspace with the command `$ npx create-nx-workspace` and choose the name "Coding-Challenge" with the angular app "receipt-printer-app".
+2. Setup development environment: Create a NX workspace with the command `$ npx create-nx-workspace` and choose the name "Coding-Challenge" with the angular app "receipt-printer-app".
 3. Update NX workspace and all npm-packages => Ensure that no deprecated or critical packages are used.
 4. Update README.md file.
 
 ---
 
 ## (Code) Quality
+Coming soon ...
+
+--- 
+
+## Further steps
 Coming soon ...
