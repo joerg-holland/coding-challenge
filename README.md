@@ -133,6 +133,9 @@ This are the development steps:
 18. Write tests for the calculateTotalforCart() function of carts service. After that write the function to validate the tests and document the code.
 19. Write test to getPriceOfProductWithTaxes() function of taxes service. After that write the function to validate the tests and document the code.
 20. Remove not needed component.
+21. Write tests for the app component. After that create the ui with input and output and write the function to validate the tests.
+22. Document the app component.
+23. Stop development and review the work.
 
 ---
 
