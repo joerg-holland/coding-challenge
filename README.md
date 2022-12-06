@@ -92,7 +92,10 @@ Which software is required to run the application?
 
 ## Assumptions
 - It is free to use build systems and libraries the same way I would build real-world software. I choosed an NX workspace with the web framework Angular. It is maybe over-engineered but everything (e.g. development environment, test frameworks) is setup and it is for me the best way to show how i work. (Link: Development Steps -> (2))
+- Local environment with a seperate app for printing the receipt is sufficient.
 - The functionality around products and carts (like create or remove products or add products to the cart) is not part of this application. Instead mock data is used. (Link: Requirements -> App -> (2) Services)
+- Simple text output of the carts in the app is sufficient.
+- The amount of a product in a shopping cart is everytime one item.
 
 ---
 
@@ -151,7 +154,8 @@ This are the development steps:
 22. Document the app component.
 23. Stop development and review the work.
 24. Fix output of price in app and screenshot.
-25. Add (Code) Quality section in readme.
+25. Add (Code) Quality section in the readme file.
+26. Add Further Steps section and adapt Assumptions section in the readme file.
 
 ---
 
@@ -167,6 +171,7 @@ The following methods are used to ensure (code) quality during development phase
 
 Additional methods to ensure (code) quality:
 - Code Reviews
+- Test results
 - Documentation
   - Flowcharts, sequence diagrams, ...
 - Pre-Commits which runs the command for linting or running the unit tests (like husky)
@@ -176,4 +181,7 @@ Additional methods to ensure (code) quality:
 --- 
 
 ## Further Steps
-Coming soon ...
+- Feedback from customer.
+- Deploy the application to a different environment. To be more flexible us a Docker-based environment.
+- Add Behavior-Driven Development (BDD) with Cypress additonal to TDD.
+- The amount of a product in a shopping cart can be more than one item.
