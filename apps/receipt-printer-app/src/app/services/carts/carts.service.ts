@@ -40,4 +40,21 @@ export class CartsService {
 
     return calculateTaxes;
   }
+
+  /**
+   * calculate total for cart
+   * @return number totalCart
+   * @public
+   */
+  public calculateTotalforCart(cart: Cart): number {
+    let totalCart = 0.0;
+
+    cart.products.forEach(cartProduct => {
+      const product = this.productsService.get(cartProduct.id);
+      const resultTaxFromProduct = this.taxesService.getTaxFromProduct(product);
+      totalCart = Number((product.price + totalCart + resultTaxFromProduct).toFixed(2));
+    });
+
+    return totalCart;
+  }
 }
