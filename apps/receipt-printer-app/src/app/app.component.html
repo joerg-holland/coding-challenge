@@ -13,7 +13,7 @@
             <div *ngFor="let cart of inputCarts; let i = index">
                 <p>Input {{i+1}}:</p>
                 <div *ngFor="let product of cart.products">
-                    <span>> {{product.amount}} {{getProduct(product.id).name}} at {{getProduct(product.id).price}}</span>
+                    <span>> {{product.amount}} {{getProduct(product.id).name}} at {{getProduct(product.id).price | number : '1.2-2'}}</span>
                 </div>
                 <br>
             </div>
@@ -25,10 +25,10 @@
             <div *ngFor="let cart of inputCarts; let i = index">
                 <p>Output {{i+1}}:</p>
                 <div *ngFor="let product of cart.products">
-                    <span>> {{product.amount}} {{getProduct(product.id).name}}: {{calculatePriceWithTaxes(product.id)}}</span>
+                    <span>> {{product.amount}} {{getProduct(product.id).name}}: {{calculatePriceWithTaxes(product.id) | number : '1.2-2'}}</span>
                 </div>
-                <p>> Sales Taxes: {{calculateTaxforCart(cart)}}</p>
-                <p>> Total: {{calculateTotalforCart(cart)}}</p>
+                <p>> Sales Taxes: {{calculateTaxforCart(cart) | number : '1.2-2'}}</p>
+                <p>> Total: {{calculateTotalforCart(cart) | number : '1.2-2'}}</p>
                 <br>
             </div>
         </div>
