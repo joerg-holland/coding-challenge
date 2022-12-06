@@ -31,20 +31,42 @@ export class AppComponent implements OnInit {
     }
   }
 
-  getProduct(id: string): Product {
+  /**
+   * calculate taxes for cart
+   * @return number calculateTaxes
+   * @public
+   */
+  public getProduct(id: string): Product {
     return this.productsService.get(id);
   }
 
-  calculatePriceWithTaxes(productId: string): number {
+  /**
+   * calculate price with taxes
+   * @return number price
+   * @public
+   */
+   public calculatePriceWithTaxes(productId: string): number {
     const product: Product = this.getProduct(productId);
-    return this.taxesService.getPriceOfProductWithTaxes(product);
+    const price: number = this.taxesService.getPriceOfProductWithTaxes(product);
+    return price;
+  }
+  /**
+   * calculate taxes for cart
+   * @return number taxes
+   * @public
+   */
+  public calculateTaxforCart(cart: Cart): number {
+    const taxes: number = this.cartsService.calculateTaxforCart(cart);
+    return taxes;
   }
 
-  calculateTaxforCart(cart: Cart): number {
-    return this.cartsService.calculateTaxforCart(cart);
-  }
-
-  calculateTotalforCart(cart: Cart): number {
-    return this.cartsService.calculateTotalforCart(cart);
+  /**
+   * calculate total for cart
+   * @return number total
+   * @public
+   */
+   public calculateTotalforCart(cart: Cart): number {
+    const total: number = this.cartsService.calculateTotalforCart(cart);
+    return total;
   }
 }
