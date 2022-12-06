@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
 
 import { Product } from '../../interfaces/products';
+import { UtilsService } from '../utils/utils.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaxesService {
+
+  constructor(
+    private utilsService: UtilsService
+  ){}
 
   basicTax = 0.1;
   importTax = 0.05
@@ -26,7 +31,7 @@ export class TaxesService {
       taxPercent += this.importTax;
     }
 
-    const productTax = Number((product.price * taxPercent).toFixed(4));
+    const productTax = this.utilsService.roundingUpRule(Number((product.price * taxPercent).toFixed(4)));
 
     return productTax;
   }

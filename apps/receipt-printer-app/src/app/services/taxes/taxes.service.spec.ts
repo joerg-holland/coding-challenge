@@ -34,8 +34,8 @@ describe('TaxesService', () => {
     const taxFoodImported: number = service.getTaxFromProduct(mockProducts[3]);
     expect(taxFoodImported).toBe(0.5);
     const taxCosmetics: number = service.getTaxFromProduct(mockProducts[4]);
-    expect(taxCosmetics).toBe(1.899);
+    expect(taxCosmetics).toBe(1.9);
     const taxCosmeticsImported: number = service.getTaxFromProduct(mockProducts[5]);
-    expect(taxCosmeticsImported).toBe(7.125);
+    expect(taxCosmeticsImported).toBe(7.15);
   });
 });
