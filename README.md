@@ -99,7 +99,7 @@ Run `$ npm run ng serve receipt-printer-app` to start the application for a dev 
 
 ### 3. Build the application
 
-Run `$ npm run ng build receipt-printer-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `$ npm run ng build receipt-printer-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build, where the code will be optimized and minimized.
 
 ### 4. Running unit tests
 
@@ -141,11 +141,28 @@ This are the development steps:
 21. Write tests for the app component. After that create the ui with input and output and write the function to validate the tests.
 22. Document the app component.
 23. Stop development and review the work.
+24. Fix output of price in app and screenshot.
+25. Add (Code) Quality section in readme.
 
 ---
 
 ## (Code) Quality
-Coming soon ...
+The following methods are used to ensure (code) quality during development phase:
+- Test-Driven-Development (TDD)
+- Unit tests
+- Helpful commit messages
+- Documentation
+  - Code documentation
+  - Detail README.md or other helful files => "Getting started", "Required software", ... 
+  - Screenshots 
+
+Additional methods to ensure (code) quality:
+- Code Reviews
+- Documentation
+  - Flowcharts, sequence diagrams, ...
+- Pre-Commits which runs the command for linting or running the unit tests (like husky)
+- Application logs
+- Additional testing methods (like E2E-Testing with Cypress)
 
 --- 
 
