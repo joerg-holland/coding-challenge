@@ -35,4 +35,17 @@ export class TaxesService {
 
     return productTax;
   }
+
+  /**
+   * get price of product with taxes
+   * @return number productPrice
+   * @public
+   */
+  public getPriceOfProductWithTaxes(product: Product): number {
+
+    const productTax = this.getTaxFromProduct(product);
+    const productPrice = Number((product.price + productTax).toFixed(2));;
+
+    return productPrice;
+  }
 }

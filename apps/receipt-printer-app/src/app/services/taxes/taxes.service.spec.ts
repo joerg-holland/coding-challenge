@@ -38,4 +38,13 @@ describe('TaxesService', () => {
     const taxCosmeticsImported: number = service.getTaxFromProduct(mockProducts[5]);
     expect(taxCosmeticsImported).toBe(7.15);
   });
+
+  it('should return price of product with taxes', () => {
+    // Mock data:
+    const mockProducts: Product[] = [
+      { id: '74609292-af62-4eea-98c3-6bad8d15dc94', name: 'music CD', price: 14.99, import: false, category: 'music' }
+    ];
+    const price: number = service.getPriceOfProductWithTaxes(mockProducts[0]);
+    expect(price).toBe(16.49);
+  });
 });
