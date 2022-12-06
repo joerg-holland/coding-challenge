@@ -107,6 +107,11 @@ Run `$ npm run ng test receipt-printer-app` to execute the unit tests via [Jest]
 
 ---
 
+## Screenshots
+![app-screenshot](https://github.com/joerg-holland/coding-challenge/blob/main/meta-assets/app-screenshot.png?raw=true)
+
+---
+
 ## Development Steps
 This are the development steps:
 1. Initialize the Git-Repository.
