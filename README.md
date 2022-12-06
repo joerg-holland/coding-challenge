@@ -3,6 +3,15 @@
 ## Description
 Link to Coding-Challenge - [Problem 1: Sales Taxes](CODING-CHALLENGE.md)
 
+### Table of Contents  
+[Requirements](##Requirements)  
+[Assumptions](##Assumptions)  
+[Getting Started](##Getting-Started)  
+[Screenshots](##Screenshots)  
+[Development Steps](##Development-Steps)  
+[(Code) Quality](##(Code)-Quality)  
+[Further Steps](##Further-Steps)  
+
 ---
 
 ## Requirements
@@ -166,5 +175,5 @@ Additional methods to ensure (code) quality:
 
 --- 
 
-## Further steps
+## Further Steps
 Coming soon ...
