@@ -127,6 +127,8 @@ This are the development steps:
 12. Write test to getAll() shopping carts. After that write the function to load the mock carts and document the code.
 13. Create taxes service and the test file with the command `$ npm run ng g service taxes --project=receipe-printer`
 14. Write test to getTaxFromProduct(). After that write the function to validate the tests and document the code.
+15. Create utils service and the test file with the command `$ npm run ng g service utils --project=receipe-printer`
+16. Write tests for the roundingUpRule(). After that write the function to validate the tests and document the code.
 
 ---
 
