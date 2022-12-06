@@ -129,6 +129,8 @@ This are the development steps:
 14. Write test to getTaxFromProduct(). After that write the function to validate the tests and document the code.
 15. Create utils service and the test file with the command `$ npm run ng g service utils --project=receipe-printer`
 16. Write tests for the roundingUpRule(). After that write the function to validate the tests and document the code.
+17. Write tests for the calculateTaxforCart() function of carts service. After that write the function to validate the tests and document the code.
+18. Write tests for the calculateTotalforCart() function of carts service. After that write the function to validate the tests and document the code.
 
 ---
 
