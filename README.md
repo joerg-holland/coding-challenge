@@ -131,6 +131,8 @@ This are the development steps:
 16. Write tests for the roundingUpRule(). After that write the function to validate the tests and document the code.
 17. Write tests for the calculateTaxforCart() function of carts service. After that write the function to validate the tests and document the code.
 18. Write tests for the calculateTotalforCart() function of carts service. After that write the function to validate the tests and document the code.
+19. Write test to getPriceOfProductWithTaxes() function of taxes service. After that write the function to validate the tests and document the code.
+20. Remove not needed component.
 
 ---
 
