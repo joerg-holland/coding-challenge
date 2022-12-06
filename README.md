@@ -125,6 +125,8 @@ This are the development steps:
 10. Write test to get(id) one article. After that write the function to load the mock article and document the code.
 11. Create cart service and the test file with the command `$ npm run ng g service carts --project=receipe-printer`
 12. Write test to getAll() shopping carts. After that write the function to load the mock carts and document the code.
+13. Create taxes service and the test file with the command `$ npm run ng g service taxes --project=receipe-printer`
+14. Write test to getTaxFromProduct(). After that write the function to validate the tests and document the code.
 
 ---
 
